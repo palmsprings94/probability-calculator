@@ -1,6 +1,6 @@
 import random
 import copy
-import collections
+
 class Hat:
 
     def __init__(self, **hats):
