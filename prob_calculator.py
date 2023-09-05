@@ -31,7 +31,7 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     for _ in range(num_experiments):
         nhat = copy.deepcopy(hat)
         bawlsdrawn = nhat.draw(num_balls_drawn)
-        if collections.Counter(bawlsdrawn) == collections.Counter(ehat):
+        if any(item in bawlsdrawn for item in ehat):
             m = m + 1
     probability = m / num_experiments
     
