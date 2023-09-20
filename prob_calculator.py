@@ -7,9 +7,11 @@ class Hat:
         self.hats = hats
         self.contents = []
         for i in self.hats:
-            for _ in range(self.hats[i]):
+            joestar = self.hats[i]
+            while joestar > 0:
                 self.contents.append(i)
-
+                joestar -= 1
+                
     def draw(self, x):
         drawnballs = []
         if x > len(self.contents):
